@@ -1,0 +1,45 @@
+/*
+WAP to print the maximum and the minimum number respectively among three numbers entered by the user.
+*/
+
+#include<iostream>
+using namespace std;
+
+int maximumno(int a,int b,int c){
+	if(a>=b&&a>=c){
+		return a;
+	}
+	else if(b>=a&&b>=c){
+		return b;
+	}
+	else{
+		return c;
+	}
+}
+
+int minimumno(int a,int b,int c){
+	if(a<=b&&a<=c){
+		return a;
+	}
+	else if(b<=a&&b<=c){
+		return b;
+	}
+	else{
+		return c;
+	}
+}
+
+int main(){
+	int a,b,c,max,min;
+	cout<<"Enter first number"<<endl;
+	cin>>a;
+	cout<<"Enter second number"<<endl;
+	cin>>b;
+	cout<<"Enter third number"<<endl;
+	cin>>c;
+	
+	max=maximumno(a,b,c);
+	cout<<max<<endl;
+    min=minimumno(a,b,c);
+    cout<<min<<endl;
+}
