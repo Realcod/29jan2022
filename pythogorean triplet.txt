@@ -1,0 +1,37 @@
+/*
+Write a function to check if a given triplet is a Pythagorean triplet or not.
+(A Pythagorean triplet is when the sum of the square of two numbers is equal to the square of the third number).
+*/
+
+#include<iostream>
+using namespace std;
+
+void findpyth(int n){
+	for(int i=1;i<=n;i++){
+		for(int j=i;j<=n;j++){
+			for(int k=j;k<=n;k++){
+				if(i*i+j*j==k*k){
+					cout<<i<<" "<<j<<" "<<k<<endl;
+				}
+			}
+		}
+	}
+}
+
+bool checkpy(int num,int a,int b){
+	if(num*num+a*a==b*b){
+		return true;
+	}
+	return false;
+}
+
+int main(){
+	int n,num,a,b;
+	cout<<"Enter number till you want to print pythogorean triplet"<<endl;
+	cin>>n;
+	findpyth(n);
+	cout<<"Enter the number whether this is pythogoream triplet or not"<<endl;
+	cin>>num>>a>>b;
+	bool pt=checkpy(num,a,b);
+	cout<<pt<<endl;
+}
