@@ -1,0 +1,34 @@
+/*
+A high-security meeting has been arranged. Tables for the delegates and security personnel have been arranged.
+A total of ‘N’ rows of tables has been set up. The first row has one table, the second row has two, and so on.
+To ensure maximum security, the tables on either end of each row have been assigned for security personnel each.
+If there is only one table in a row, it will be assigned to a security personnel. The tables assigned for security
+ personnel will host exactly one security personnel each. All the other tables will host two guests each.
+You are given an integer ‘N’, which denotes the number of rows., You are supposed to print the table pattern
+indicating the number of guests or security personnel at each table. In other words, print the number of people in each table.
+*/
+
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n;
+	cout<<"Enter number of rows"<<endl;
+	cin>>n;
+	
+	int i=1;
+	while(i<=n){
+		int j=1;
+		while(j<=i){
+			if(j==1||j==i){
+				cout<<1;
+			}
+			else{
+				cout<<2;
+			}
+			j++;
+		}
+		cout<<endl;
+		i++;
+	}
+}
